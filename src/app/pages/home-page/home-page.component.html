@@ -1,0 +1,33 @@
+<div class="todo">
+    <h1 class="text-center py-5 text-danger">
+        My Todo-List
+    </h1>
+    
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+
+        <div class="addInput m-5">
+            <input type="text" name="" id="" >
+        </div>
+
+        <div class="box p-5">
+            <!-- <h1>Dakshayani Biscuits</h1> -->
+            <!-- <div class="itemcontent d-flex flex-column">
+                <input type="checkbox" name="select" id="">
+                <p>Some Text</p>
+                <input type="checkbox" name="select" id="">
+                <p>Some Text</p>
+            </div> -->
+            <ul class="list">
+
+                @for(item of todos;track item.id){
+                <li class="d-flex justify-content-between" >
+                    <input type="checkbox" class="" name="select" id="" >
+                    <p>{{ item.title }}</p>
+                    <i class="bi bi-trash text-danger"></i>
+                </li>
+            }
+
+            </ul>
+        </div>
+    </div>
+</div>
